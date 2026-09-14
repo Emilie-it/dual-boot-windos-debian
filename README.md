@@ -45,6 +45,7 @@ Avant l'installation de Debian :
 ### Problème rencontré lors du redimensionnement
 
 La gestion des disques Windows ne permettait de réduire la partition `C:` que d'environ 5,9 Go, malgré un espace libre largement supérieur.
+![Limitation de la réduction de la partition Windows à environ 5,9 Go](01-windows-limite-reduction.jpeg)
 
 Des vérifications ont donc été effectuées afin d'identifier la cause de cette limitation.
 
@@ -73,10 +74,12 @@ La réduction souhaitée restant impossible depuis Windows, j'ai choisi d'effect
 ## Redimensionnement avec GParted Live
 
 1. Création d'une clé USB bootable GParted Live à partir de son image ISO avec Rufus.
-2. Redémarrage de l'ordinateur et accès au menu de démarrage UEFI.
-3. Démarrage sur la clé GParted Live.
-4. Réduction de la partition Windows `C:` d'environ 50 Go afin d'obtenir de l'espace non alloué destiné à Debian.
-5. Application du redimensionnement.
+   ![Création de la clé USB GParted Live avec Rufus](02-rufus-gparted.jpeg)
+3. Redémarrage de l'ordinateur et accès au menu de démarrage UEFI.
+4. Démarrage sur la clé GParted Live.
+5. Réduction de la partition Windows `C:` d'environ 50 Go afin d'obtenir de l'espace non alloué destiné à Debian.
+6. Application du redimensionnement.
+![Redimensionnement de la partition Windows avec GParted](03-gparted-redimensionnement.jpeg)
 
 GParted a confirmé la fin du redimensionnement sans erreur.
 
@@ -103,6 +106,7 @@ Pendant l'installation, les composants suivants ont notamment été sélectionn�
 * environnement de bureau GNOME ;
 * utilitaires usuels du système ;
 * serveur SSH.
+![Sélection des logiciels lors de l'installation de Debian 13](04-debian-selection-logiciels.jpeg)
 
 ---
 
@@ -125,6 +129,7 @@ Debian   Windows 11
   |          |
   OK         OK
 ```
+![Détection de Windows Boot Manager par GRUB](05-grub-detection-windows.jpeg)
 
 ---
 
@@ -138,6 +143,7 @@ Après l'installation, un retour sous Windows a permis de vérifier :
 * l'état du chiffrement du volume `C:`.
 
 Le volume Windows a notamment été contrôlé avec `manage-bde`.
+![Vérification de l'état du chiffrement BitLocker sous Windows](06-windows-bitlocker-verification.jpeg)
 
 ### Hibernation et démarrage rapide
 
