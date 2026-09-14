@@ -67,7 +67,7 @@ Aucune erreur du système de fichiers n'a été détectée.
 
 La réduction souhaitée restant impossible depuis Windows, j'ai choisi d'effectuer le redimensionnement hors ligne avec GParted Live.
 
-> Le détail du diagnostic est disponible dans `troubleshooting/reduction-partition-windows.md`.
+> Le diagnostic détaillé est disponible dans [Troubleshooting — Réduction de la partition Windows](troubleshooting/reduction-partition-windows.md).
 
 ---
 
